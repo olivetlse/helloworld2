@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Code Build') {
             steps {
-             sh 'mvn site'
+             sh 'mvn package'
             }
         } 
         stage ('Deploy') {
