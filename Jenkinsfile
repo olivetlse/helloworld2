@@ -22,7 +22,7 @@ pipeline {
         stage ('Deploy') {
             steps {
               script {
-                      deploy adapters: [tomcat9(credentialsId: 'tomcat_credential', path: '', url: 'http://192.168.133.128:8081')], contextPath: '/Gosecuri', onFailure: false, war: 'target/*.war' 
+                      deploy adapters: [tomcat9(credentialsId: 'tomcat_credential', path: '', url: 'http://192.168.133.128:8081')], contextPath: '/gosecuri', onFailure: false, war: 'target/*.war' 
         }
       }
     }
